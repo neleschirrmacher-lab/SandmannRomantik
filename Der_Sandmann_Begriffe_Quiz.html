@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Der Sandmann – Begriffe-Quiz</title>
+<style>
+:root{--accent:#4f46e5;--bg:#f4f6fb;--ink:#172033;--muted:#64748b;--ok:#166534;--okbg:#ecfdf3;--bad:#991b1b;--badbg:#fef2f2}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);font-size:17px;line-height:1.5}
+header{background:var(--accent);color:#fff;padding:22px max(18px,5vw);padding-top:calc(22px + env(safe-area-inset-top))}
+header h1{margin:0;font-size:clamp(1.5rem,5vw,2.3rem)} header p{margin:5px 0 0}
+main{max-width:1100px;margin:auto;padding:20px 14px calc(55px + env(safe-area-inset-bottom))}
+.card{background:#fff;border:1px solid #dce2ed;border-radius:18px;padding:22px;margin-bottom:18px;box-shadow:0 5px 20px rgba(20,30,50,.07)}
+h2{margin:0 0 8px}.muted{color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+button,input,select{font:inherit}
+button{background:var(--accent);color:white;border:0;border-radius:10px;padding:11px 15px;font-weight:700;cursor:pointer;touch-action:manipulation}
+button.sol{background:white;color:var(--accent);border:1px solid var(--accent)}
+.feedback,.solution{display:none;margin-top:14px;padding:13px;border-radius:10px}
+.feedback.show{display:block}.feedback.good{background:var(--okbg);color:var(--ok)}
+.solution.show{display:block;background:#f5f3ff;border:1px solid #ddd6fe}
+.rows{display:grid;gap:12px}.row{display:grid;grid-template-columns:minmax(150px,.8fr) minmax(0,1.8fr);gap:10px;align-items:center}
+.def{padding:12px;border:1px solid #dbe0eb;border-radius:10px;background:#fafbff}
+input,select{width:100%;padding:10px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:var(--ink)}
+.choice{padding:13px;border:1px solid #dbe0eb;border-radius:10px;background:#fafbff;margin:10px 0}
+.choice label{display:block;cursor:pointer}
+.choice input{width:auto;margin-right:8px}
+.example{background:#f8fafc;border-left:4px solid var(--accent);padding:12px;margin:14px 0}
+.cloze{line-height:2.8}.cloze input{width:170px;display:inline-block;padding:5px 8px}
+#final{display:none;text-align:center;background:#fff;border:3px solid var(--accent);border-radius:20px;padding:28px;margin-top:24px}
+#final h2{font-size:2rem}#score{font-size:3rem;font-weight:800;color:var(--accent)}
+@media(max-width:650px){.row{grid-template-columns:1fr}.card{padding:18px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Der Sandmann – Begriffe-Quiz</h1>
+<p>Erkennen · Zuordnen · Anwenden · Verknüpfen</p>
+</header>
+<main>
+
+<section class="card">
+<p><strong>So funktioniert das Quiz:</strong> Bearbeite alle fünf Aufgaben. Nach jeder Aufgabe kannst du deine Antworten überprüfen und dir die Lösungen anzeigen lassen.</p>
+<p class="muted">Insgesamt kannst du <strong>30 Punkte</strong> erreichen.</p>
+</section>
+
+<section class="card">
+<h2>1. Fachbegriffe zuordnen – 7 Punkte</h2>
+<p class="muted">Ordne jedem Begriff die passende Erklärung zu.</p>
+<div class="rows">
+<div class="row"><strong>Aufklärung</strong><select id="m11"><option value="">Definition auswählen …</option><option value="1">Geistige Strömung, die Vernunft, selbstständiges Denken und kritische Prüfung betont.</option><option value="2">Literarische Strömung, die unter anderem Gegensätze, Sehnsucht, Fantasie und die Grenzen der rationalen Erklärung thematisiert.</option><option value="3">Unterströmung der Romantik mit Fokus auf Unheimliches, Dämonisches und dunkle Seiten der Psyche.</option><option value="4">Veränderung, bei der technische Entwicklungen zunehmend Lebensbereiche und Vorstellungen vom Menschen prägen.</option><option value="5">Das Gefühl, dass etwas zugleich vertraut und befremdlich wirkt.</option><option value="6">Vorstellung, dass eine Person eigene Wünsche oder Vorstellungen in eine andere Person hineinliest.</option><option value="7">Gestaltung einer Figur oder eines Gegenstands als künstlich belebtes, menschenähnliches Wesen.</option></select></div>
+<div class="row"><strong>Romantik</strong><select id="m12"><option value="">Definition auswählen …</option><option value="1">Geistige Strömung, die Vernunft, selbstständiges Denken und kritische Prüfung betont.</option><option value="2">Literarische Strömung, die unter anderem Gegensätze, Sehnsucht, Fantasie und die Grenzen der rationalen Erklärung thematisiert.</option><option value="3">Unterströmung der Romantik mit Fokus auf Unheimliches, Dämonisches und dunkle Seiten der Psyche.</option><option value="4">Veränderung, bei der technische Entwicklungen zunehmend Lebensbereiche und Vorstellungen vom Menschen prägen.</option><option value="5">Das Gefühl, dass etwas zugleich vertraut und befremdlich wirkt.</option><option value="6">Vorstellung, dass eine Person eigene Wünsche oder Vorstellungen in eine andere Person hineinliest.</option><option value="7">Gestaltung einer Figur oder eines Gegenstands als künstlich belebtes, menschenähnliches Wesen.</option></select></div>
+<div class="row"><strong>Schwarze Romantik</strong><select id="m13"><option value="">Definition auswählen …</option><option value="1">Geistige Strömung, die Vernunft, selbstständiges Denken und kritische Prüfung betont.</option><option value="2">Literarische Strömung, die unter anderem Gegensätze, Sehnsucht, Fantasie und die Grenzen der rationalen Erklärung thematisiert.</option><option value="3">Unterströmung der Romantik mit Fokus auf Unheimliches, Dämonisches und dunkle Seiten der Psyche.</option><option value="4">Veränderung, bei der technische Entwicklungen zunehmend Lebensbereiche und Vorstellungen vom Menschen prägen.</option><option value="5">Das Gefühl, dass etwas zugleich vertraut und befremdlich wirkt.</option><option value="6">Vorstellung, dass eine Person eigene Wünsche oder Vorstellungen in eine andere Person hineinliest.</option><option value="7">Gestaltung einer Figur oder eines Gegenstands als künstlich belebtes, menschenähnliches Wesen.</option></select></div>
+<div class="row"><strong>Technisierung</strong><select id="m14"><option value="">Definition auswählen …</option><option value="1">Geistige Strömung, die Vernunft, selbstständiges Denken und kritische Prüfung betont.</option><option value="2">Literarische Strömung, die unter anderem Gegensätze, Sehnsucht, Fantasie und die Grenzen der rationalen Erklärung thematisiert.</option><option value="3">Unterströmung der Romantik mit Fokus auf Unheimliches, Dämonisches und dunkle Seiten der Psyche.</option><option value="4">Veränderung, bei der technische Entwicklungen zunehmend Lebensbereiche und Vorstellungen vom Menschen prägen.</option><option value="5">Das Gefühl, dass etwas zugleich vertraut und befremdlich wirkt.</option><option value="6">Vorstellung, dass eine Person eigene Wünsche oder Vorstellungen in eine andere Person hineinliest.</option><option value="7">Gestaltung einer Figur oder eines Gegenstands als künstlich belebtes, menschenähnliches Wesen.</option></select></div>
+<div class="row"><strong>Unheimliches</strong><select id="m15"><option value="">Definition auswählen …</option><option value="1">Geistige Strömung, die Vernunft, selbstständiges Denken und kritische Prüfung betont.</option><option value="2">Literarische Strömung, die unter anderem Gegensätze, Sehnsucht, Fantasie und die Grenzen der rationalen Erklärung thematisiert.</option><option value="3">Unterströmung der Romantik mit Fokus auf Unheimliches, Dämonisches und dunkle Seiten der Psyche.</option><option value="4">Veränderung, bei der technische Entwicklungen zunehmend Lebensbereiche und Vorstellungen vom Menschen prägen.</option><option value="5">Das Gefühl, dass etwas zugleich vertraut und befremdlich wirkt.</option><option value="6">Vorstellung, dass eine Person eigene Wünsche oder Vorstellungen in eine andere Person hineinliest.</option><option value="7">Gestaltung einer Figur oder eines Gegenstands als künstlich belebtes, menschenähnliches Wesen.</option></select></div>
+<div class="row"><strong>Projektion</strong><select id="m16"><option value="">Definition auswählen …</option><option value="1">Geistige Strömung, die Vernunft, selbstständiges Denken und kritische Prüfung betont.</option><option value="2">Literarische Strömung, die unter anderem Gegensätze, Sehnsucht, Fantasie und die Grenzen der rationalen Erklärung thematisiert.</option><option value="3">Unterströmung der Romantik mit Fokus auf Unheimliches, Dämonisches und dunkle Seiten der Psyche.</option><option value="4">Veränderung, bei der technische Entwicklungen zunehmend Lebensbereiche und Vorstellungen vom Menschen prägen.</option><option value="5">Das Gefühl, dass etwas zugleich vertraut und befremdlich wirkt.</option><option value="6">Vorstellung, dass eine Person eigene Wünsche oder Vorstellungen in eine andere Person hineinliest.</option><option value="7">Gestaltung einer Figur oder eines Gegenstands als künstlich belebtes, menschenähnliches Wesen.</option></select></div>
+<div class="row"><strong>Automat</strong><select id="m17"><option value="">Definition auswählen …</option><option value="1">Geistige Strömung, die Vernunft, selbstständiges Denken und kritische Prüfung betont.</option><option value="2">Literarische Strömung, die unter anderem Gegensätze, Sehnsucht, Fantasie und die Grenzen der rationalen Erklärung thematisiert.</option><option value="3">Unterströmung der Romantik mit Fokus auf Unheimliches, Dämonisches und dunkle Seiten der Psyche.</option><option value="4">Veränderung, bei der technische Entwicklungen zunehmend Lebensbereiche und Vorstellungen vom Menschen prägen.</option><option value="5">Das Gefühl, dass etwas zugleich vertraut und befremdlich wirkt.</option><option value="6">Vorstellung, dass eine Person eigene Wünsche oder Vorstellungen in eine andere Person hineinliest.</option><option value="7">Gestaltung einer Figur oder eines Gegenstands als künstlich belebtes, menschenähnliches Wesen.</option></select></div>
+</div>
+<div class="actions"><button type="button" onclick="checkMatch1()">Auswertung</button><button type="button" class="sol" onclick="toggle('s1')">Lösungen anzeigen</button></div>
+<div id="m1fb" class="feedback"></div><div id="s1" class="solution"><strong>Aufklärung</strong> → Vernunft und selbstständiges Denken · <strong>Romantik</strong> → Gegensätze, Sehnsucht, Fantasie und Grenzen rationaler Erklärung · <strong>Schwarze Romantik</strong> → Unheimliches, Dämonisches und dunkle Psyche · <strong>Technisierung</strong> → zunehmende Prägung des Lebens durch Technik · <strong>Unheimliches</strong> → zugleich vertraut und befremdlich · <strong>Projektion</strong> → eigene Vorstellungen werden in andere hineingelesen · <strong>Automat</strong> → künstlich belebtes, menschenähnliches Wesen</div>
+</section>
+
+<section class="card">
+<h2>2. Welcher Begriff passt? – 6 Punkte</h2>
+<p class="muted">Wähle jeweils den Begriff, der die beschriebene Situation am genauesten erfasst.</p>
+<div class="def"><strong>1.</strong> Clara versucht, Nathanaels Erlebnisse durch Angst, Einbildung und psychologische Vorgänge zu erklären.<div class="choice"><label><input type="radio" name="q1" value="Aufklärung"> Aufklärung</label><label><input type="radio" name="q1" value="Schwarze Romantik"> Schwarze Romantik</label><label><input type="radio" name="q1" value="Projektion"> Projektion</label><label><input type="radio" name="q1" value="Technisierung"> Technisierung</label></div></div>
+<div class="def"><strong>2.</strong> Eine Figur wirkt wie ein Mensch, zeigt aber auffällig starre und mechanische Bewegungen.<div class="choice"><label><input type="radio" name="q2" value="Automat"> Automat</label><label><input type="radio" name="q2" value="Sehnsucht"> Sehnsucht</label><label><input type="radio" name="q2" value="Aufklärung"> Aufklärung</label><label><input type="radio" name="q2" value="Antithese"> Antithese</label></div></div>
+<div class="def"><strong>3.</strong> Nathanael sieht in Olimpia eine verständnisvolle Gesprächspartnerin, obwohl sie kaum spricht.<div class="choice"><label><input type="radio" name="q3" value="Projektion"> Projektion</label><label><input type="radio" name="q3" value="Technisierung"> Technisierung</label><label><input type="radio" name="q3" value="Aufklärung"> Aufklärung</label><label><input type="radio" name="q3" value="Vergangenheit"> Vergangenheit</label></div></div>
+<div class="def"><strong>4.</strong> Eine vertraute menschliche Figur wirkt plötzlich fremd, verstörend und nicht eindeutig als Mensch erkennbar.<div class="choice"><label><input type="radio" name="q4" value="Unheimliches"> Unheimliches</label><label><input type="radio" name="q4" value="Aufklärung"> Aufklärung</label><label><input type="radio" name="q4" value="Sehnsucht"> Sehnsucht</label><label><input type="radio" name="q4" value="Technisierung"> Technisierung</label></div></div>
+<div class="def"><strong>5.</strong> Literatur stellt die dunklen, irrationalen und dämonischen Seiten menschlicher Erfahrung in den Mittelpunkt.<div class="choice"><label><input type="radio" name="q5" value="Schwarze Romantik"> Schwarze Romantik</label><label><input type="radio" name="q5" value="Aufklärung"> Aufklärung</label><label><input type="radio" name="q5" value="Realismus"> Realismus</label><label><input type="radio" name="q5" value="Technisierung"> Technisierung</label></div></div>
+<div class="def"><strong>6.</strong> Technische Entwicklungen verändern Vorstellungen davon, was ein Mensch oder ein menschliches Gegenüber sein kann.<div class="choice"><label><input type="radio" name="q6" value="Technisierung"> Technisierung</label><label><input type="radio" name="q6" value="Sehnsucht"> Sehnsucht</label><label><input type="radio" name="q6" value="Aufklärung"> Aufklärung</label><label><input type="radio" name="q6" value="Projektion"> Projektion</label></div></div>
+<div class="actions"><button type="button" onclick="checkApply()">Auswertung</button></div>
+<div id="af" class="feedback"></div>
+</section>
+
+<section class="card">
+<h2>3. Romantik oder Aufklärung? – 5 Punkte</h2>
+<p class="muted">Ordne die Aussagen der passenden Denkweise zu.</p>
+<div class="rows">
+<div class="row"><strong>„Die Welt soll durch Vernunft und kritisches Denken erklärbar werden.“</strong><select id="r1"><option value="">Zuordnen …</option><option>Aufklärung</option><option>Romantik</option></select></div>
+<div class="row"><strong>„Die sichtbare Wirklichkeit kann auf eine tiefere, nicht vollständig rational erfassbare Ebene verweisen.“</strong><select id="r2"><option value="">Zuordnen …</option><option>Aufklärung</option><option>Romantik</option></select></div>
+<div class="row"><strong>„Nicht alles, was Menschen erleben, lässt sich allein mit Vernunft erklären.“</strong><select id="r3"><option value="">Zuordnen …</option><option>Aufklärung</option><option>Romantik</option></select></div>
+<div class="row"><strong>„Selbstständiges Denken und die kritische Prüfung von Vorstellungen sind zentral.“</strong><select id="r4"><option value="">Zuordnen …</option><option>Aufklärung</option><option>Romantik</option></select></div>
+<div class="row"><strong>„Traum, Natur, Gefühl und Fantasie können miteinander verbunden werden.“</strong><select id="r5"><option value="">Zuordnen …</option><option>Aufklärung</option><option>Romantik</option></select></div>
+</div>
+<div class="actions"><button type="button" onclick="checkRom()">Auswertung</button><button type="button" class="sol" onclick="toggle('s3')">Lösungen anzeigen</button></div>
+<div id="rf" class="feedback"></div><div id="s3" class="solution">1 Aufklärung · 2 Romantik · 3 Romantik · 4 Aufklärung · 5 Romantik</div>
+</section>
+
+<section class="card">
+<h2>4. Nathanael, Olimpia und Narziss – 6 Punkte</h2>
+<p class="muted">Welche Aussage beschreibt den Vergleich am treffendsten?</p>
+<div class="def">
+<strong>1.</strong> Was verbindet Nathanael und Narziss besonders?
+<div class="choice"><label><input type="radio" name="n1" value="A"> Beide interessieren sich vor allem für technische Erfindungen.</label><label><input type="radio" name="n1" value="B"> Beide begegnen einem Gegenüber, in dem sich eigene Vorstellungen spiegeln.</label><label><input type="radio" name="n1" value="C"> Beide erkennen ihre Täuschung sofort und wenden sich der Realität zu.</label><label><input type="radio" name="n1" value="D"> Beide werden durch Clara vor einer falschen Wahrnehmung bewahrt.</label></div>
+<strong>2.</strong> Was lässt Nathanaels Beziehung zu Olimpia als Projektion erscheinen?
+<div class="choice"><label><input type="radio" name="n2" value="A"> Olimpia widerspricht Nathanael häufig und verändert seine Ansichten.</label><label><input type="radio" name="n2" value="B"> Nathanael interessiert sich nur für ihre äußere Kleidung.</label><label><input type="radio" name="n2" value="C"> Nathanael schreibt Olimpia Eigenschaften zu, die er in ihr wahrnehmen möchte.</label><label><input type="radio" name="n2" value="D"> Nathanael weiß von Anfang an, dass Olimpia ein Automat ist.</label></div>
+<strong>3.</strong> Welche Frage verbindet den Fall Olimpia mit dem Narziss-Vergleich?
+<div class="choice"><label><input type="radio" name="n3" value="A"> Wie ähnlich sind sich die beiden Figuren äußerlich?</label><label><input type="radio" name="n3" value="B"> Welche Rolle spielt die französische Revolution?</label><label><input type="radio" name="n3" value="C"> Wie schnell können Menschen technische Entwicklungen verstehen?</label><label><input type="radio" name="n3" value="D"> Liebt die Figur ein reales Gegenüber oder vor allem ein eigenes Bild von ihm?</label></div>
+<strong>4.</strong> Was macht Olimpia für Nathanael besonders attraktiv?
+<div class="choice"><label><input type="radio" name="n4" value="A"> Sie widerspricht ihm kaum und scheint ihm aufmerksam zuzuhören.</label><label><input type="radio" name="n4" value="B"> Sie diskutiert mit ihm ausführlich über Aufklärung.</label><label><input type="radio" name="n4" value="C"> Sie fordert ihn ständig zu kritischer Selbstprüfung auf.</label><label><input type="radio" name="n4" value="D"> Sie erzählt ihm ausführlich von ihrer Vergangenheit.</label></div>
+<strong>5.</strong> Welcher Gegensatz ist für Nathanaels Wahrnehmung besonders wichtig?
+<div class="choice"><label><input type="radio" name="n5" value="A"> arm – reich</label><label><input type="radio" name="n5" value="B"> Stadt – Land</label><label><input type="radio" name="n5" value="C"> Mensch – Maschine</label><label><input type="radio" name="n5" value="D"> Vergangenheit – Zukunft</label></div>
+<strong>6.</strong> Welche Deutung passt zum Narziss-Vergleich?
+<div class="choice"><label><input type="radio" name="n6" value="A"> Nathanael liebt Olimpia gerade deshalb, weil sie ihm ständig widerspricht.</label><label><input type="radio" name="n6" value="B"> Nathanael erkennt in Olimpia eine Person, die unabhängig von ihm eigene Ziele verfolgt.</label><label><input type="radio" name="n6" value="C"> Nathanael könnte in Olimpia vor allem ein von ihm selbst geprägtes Idealbild sehen.</label><label><input type="radio" name="n6" value="D"> Nathanael und Narziss unterscheiden sich darin, dass keiner von beiden etwas in ein Gegenüber hineinliest.</label></div>
+</div>
+<div class="actions"><button type="button" onclick="checkNarc()">Auswertung</button></div>
+<div id="nf" class="feedback"></div>
+</section>
+
+<section class="card">
+<h2>5. Lückentext – 6 Punkte</h2>
+<p class="muted">Setze die passenden Begriffe ein.</p>
+<div class="example"><strong>Wortbank:</strong> Romantik · Aufklärung · Schwarze Romantik · Unheimliche · Projektion · Technisierung</div>
+<div id="cloze" class="cloze">
+Die <input data-answer="Aufklärung" aria-label="Lücke 1"> betont Vernunft und selbstständiges Denken. Die <input data-answer="Romantik" aria-label="Lücke 2"> fragt unter anderem danach, was jenseits einer rein rational erklärbaren Wirklichkeit liegen könnte. Die <input data-answer="Schwarze Romantik" aria-label="Lücke 3"> richtet den Blick besonders auf das Dämonische, Unheimliche und die dunklen Seiten der Psyche. Das <input data-answer="Unheimliche" aria-label="Lücke 4"> entsteht unter anderem dort, wo etwas Vertrautes zugleich fremd und verstörend wirkt. Wenn Nathanael eigene Vorstellungen in Olimpia hineinliest, kann man von <input data-answer="Projektion" aria-label="Lücke 5"> sprechen. Die zunehmende Bedeutung technischer Möglichkeiten für das Menschenbild lässt sich mit dem Begriff <input data-answer="Technisierung" aria-label="Lücke 6"> beschreiben.
+</div>
+<div class="actions"><button type="button" onclick="checkCloze()">Auswertung</button><button type="button" class="sol" onclick="toggle('s5')">Lösungen anzeigen</button></div>
+<div id="cf" class="feedback"></div><div id="s5" class="solution">Aufklärung · Romantik · Schwarze Romantik · Unheimliche · Projektion · Technisierung</div>
+</section>
+
+<section id="final">
+<h2>Dein Gesamtergebnis</h2>
+<div id="score">0 / 30</div>
+<p id="percent"></p>
+<p id="message"></p>
+</section>
+</main>
+
+<script>
+var total=30, scores={m:0,a:0,r:0,n:0,c:0};
+function toggle(id){document.getElementById(id).classList.toggle("show")}
+function feedback(id,text){var e=document.getElementById(id);e.textContent=text;e.className="feedback show good"}
+function finish(){
+ var n=scores.m+scores.a+scores.r+scores.n+scores.c;
+ document.getElementById("final").style.display="block";
+ document.getElementById("score").textContent=n+" / "+total;
+ document.getElementById("percent").textContent=Math.round(n/total*100)+" %";
+ document.getElementById("message").textContent=n===total?"Alles richtig – stark!":n>=24?"Sehr sicher!":n>=18?"Gute Grundlage – einige Begriffe kannst du noch festigen.":"Nutze die Lösungen und wiederhole die Begriffe noch einmal.";
+ document.getElementById("final").scrollIntoView({behavior:"smooth",block:"center"});
+}
+function checkMatch1(){
+ var ans=["1","2","3","4","5","6","7"];scores.m=0;
+ for(var i=1;i<=7;i++)if(document.getElementById("m1"+i).value===ans[i-1])scores.m++;
+ feedback("m1fb",scores.m+"/7 Punkte. "+(scores.m===7?"Alle Zuordnungen stimmen!":"Vergleiche die Begriffe noch einmal mit ihren Definitionen."));finish();
+}
+function checkApply(){
+ var ans=["Aufklärung","Automat","Projektion","Unheimliches","Schwarze Romantik","Technisierung"];scores.a=0;
+ for(var i=1;i<=6;i++){var e=document.querySelector('input[name="q'+i+'"]:checked');if(e&&e.value===ans[i-1])scores.a++}
+ feedback("af",scores.a+"/6 Punkte. "+(scores.a===6?"Alle Begriffe passend angewendet!":"Achte darauf, welcher Begriff die Situation am genauesten beschreibt."));finish();
+}
+function checkRom(){
+ var ans=["Aufklärung","Romantik","Romantik","Aufklärung","Romantik"];scores.r=0;
+ for(var i=1;i<=5;i++)if(document.getElementById("r"+i).value===ans[i-1])scores.r++;
+ feedback("rf",scores.r+"/5 Punkte. "+(scores.r===5?"Alle Zuordnungen stimmen!":"Prüfe noch einmal das Verhältnis von Vernunft und rationaler Erklärung zu den romantischen Gegenbewegungen und Grenzerfahrungen."));finish();
+}
+function checkNarc(){
+ var ans=["B","C","D","A","C","C"];scores.n=0;
+ for(var i=1;i<=6;i++){var e=document.querySelector('input[name="n'+i+'"]:checked');if(e&&e.value===ans[i-1])scores.n++}
+ feedback("nf",scores.n+"/6 Punkte. "+(scores.n===6?"Alle Aussagen richtig eingeordnet!":"Achte besonders auf Wahrnehmung, Projektion und die Frage nach dem Bild, das Nathanael von Olimpia entwirft."));finish();
+}
+function norm(x){return x.trim().toLowerCase().replace(/\s+/g," ")}
+function checkCloze(){
+ scores.c=0;var x=document.querySelectorAll("#cloze input");
+ x.forEach(function(e){var right=norm(e.value)===norm(e.dataset.answer);if(right)scores.c++;e.style.borderColor=right?"#86efac":"#fca5a5"});
+ feedback("cf",scores.c+"/6 Punkte. "+(scores.c===6?"Alle Lücken richtig!":"Verbessere die markierten Lücken oder nutze die Lösung."));finish();
+}
+</script>
+</body>
+</html>
